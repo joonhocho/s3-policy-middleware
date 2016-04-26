@@ -11,7 +11,8 @@ npm install --save s3-policy-middleware
 ```javascript
 import s3PolicyMiddleware from 's3-policy-middleware';
 
-// Accepts post request to /s3policy
+// Generates and returns a pre-signed s3 policy as json
+// for POST request to /s3policy
 // with req.body = {name: String!, contentType: String!}
 app.use('/s3policy', s3PolicyMiddleware({
   NAME_PREFIX: 'S3_OBJECT_KEY_PREFIX',
