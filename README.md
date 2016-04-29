@@ -30,7 +30,7 @@ app.use('/s3policy', s3PolicyMiddleware({
 
 ### Dependencies
  - Creating S3 Policy: https://github.com/joonhocho/s3-policy-v4
- - 
+
 
 ### License
 ```
