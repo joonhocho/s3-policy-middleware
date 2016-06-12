@@ -1,6 +1,6 @@
 {
   "name": "s3-policy-middleware",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Express Middleware for Amazon AWS S3 Upload Policy Generator with Signature Version 4 ",
   "main": "lib/index.js",
   "scripts": {

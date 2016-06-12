@@ -1,13 +1,24 @@
 import S3Policy from 's3-policy-v4';
 
+const assert = (value, message) => {
+  if (value == null) throw new Error(message);
+};
+
 export default (config) => {
-  const {
+  let {
     NAME_PREFIX: keyPrefix,
     REGION: region,
     BUCKET: bucket,
     ACCESS_KEY_ID: accessKey,
     SECRET_ACCESS_KEY: secretKey,
   } = config;
+
+  if (!keyPrefix) keyPrefix = '';
+
+  assert(region, "'REGION' must be provided");
+  assert(bucket, "'BUCKET' must be provided");
+  assert(accessKey, "'ACCESS_KEY_ID' must be provided");
+  assert(secretKey, "'SECRET_ACCESS_KEY' must be provided");
 
   const endPoint = `https://${bucket}.s3.amazonaws.com`;
   const urlPrefix = `${endPoint}/`;
